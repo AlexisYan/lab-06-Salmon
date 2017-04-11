@@ -1,20 +1,23 @@
+'use strict';
+
 var pike = {
   cookieLocation: '1st and Pike',
   minCookie: 23,
   maxCookie: 65,
   avgCookie: 6.3,
+  arrayAmount: [],
   randomFunction: function (){
     var randNumber = Math.floor(Math.random()*(this.maxCookie-this.minCookie+1)+this.minCookie);
     return randNumber;
   },
-  arrayAmount: [],
   addFunction: function () {
       for (var i = 0; i < 14; i++){
-        var amountCookies = this.randomFunction() * this.avgCookie;
+        var amountCookies = Math.round(this.randomFunction() * this.avgCookie);
         this.arrayAmount.push(amountCookies);
     }
   }
 };
+
 var seaTac = {
   cookieLocation: 'Seatac Airport',
   minCookie: 3,
@@ -27,12 +30,13 @@ var seaTac = {
   arrayAmount: [],
   addFunction: function () {
       for (var i = 0; i < 14; i++){
-        var amountCookies = this.randomFunction () * this.avgCookie;
+        var amountCookies = Math.round(this.randomFunction () * this.avgCookie);
 
         this.arrayAmount.push(amountCookies);
     }
   }
 };
+
 var seattle = {
   cookieLocation: 'Seattle Center',
   minCookie: 11,
@@ -45,13 +49,14 @@ var seattle = {
   arrayAmount: [],
   addFunction: function () {
       for (var i = 0; i < 14; i++){
-        var amountCookies = this.randomFunction () * this.avgCookie;
+        var amountCookies = Math.round(this.randomFunction () * this.avgCookie);
         this.arrayAmount.push(amountCookies);
     }
   }
 };
+
 var capitalHill = {
-  cookieLocation: '1st and Pike',
+  cookieLocation: 'capital hill',
   minCookie: 20,
   maxCookie: 38,
   avgCookie: 2.3,
@@ -61,12 +66,13 @@ var capitalHill = {
   },
   arrayAmount: [],
   addFunction: function () {
-      for (var i = 0; i < 14; i++){
-        var amountCookies = this.randomFunction () * this.avgCookie;
+      for (var i = 0; i < 15; i++){
+        var amountCookies = Math.round(this.randomFunction () * this.avgCookie);
         this.arrayAmount.push(amountCookies);
     }
   }
 };
+
 var Alki = {
   cookieLocation: 'Alki',
   minCookie: 2,
@@ -78,22 +84,29 @@ var Alki = {
   },
   arrayAmount: [],
   addFunction: function () {
-      for (var i = 0; i < 14; i++){
-        var amountCookies = this.randomFunction () * this.avgCookie;
+      for (var i = 0; i < 15; i++){
+        var amountCookies = Math.round(this.randomFunction () * this.avgCookie);
         this.arrayAmount.push(amountCookies);
-        return total;
+
     }
   }
 };
-var headingPike = document.getElementById('places');
-headingPike.textContent = pike.cookieLocation;
-headingPike.setAttribute('class','places');
-var hourlyPikeUl = document.getElementById('hourlyList');
-var hourlyPikeLi;
-pike.addFunction();
-for (var i = 0; i < pike.arrayAmount.length; i++){
-  console.log( i+6, 'am: ', pike.arrayAmount[i], 'cookies');
-  hourlyPikeLi = document.createElement('li');
-  hourlyPikeLi.textContent = pike.arrayAmount[i];
-  hourlyPikeUl.appendChild(hourlyPikeLi);
+var stories = [pike, seaTac, seattle, capitalHill, Alki];
+function functionName(){
+  for (var i = 0; i < stories.length; i++){
+    console.log(stories[i].minCookie);
+    var heading = document.createElement('h1');
+    heading.textContent = stories[i].cookieLocation;
+    var hourlyUl = document.getElementById('hourlyList');
+    hourlyUl.appendChild(heading);
+    var hourlyLi;
+    stories[i].addFunction();
+    for (var list = 6; list < stories[i].arrayAmount.length + 6; list++){
+      hourlyLi = document.createElement('li');
+      hourlyLi.textContent = list + 'am: '+ stories[i].arrayAmount[list]+ 'cookies';
+
+      hourlyUl.appendChild(hourlyLi);
+    }
+  }
 };
+functionName();
