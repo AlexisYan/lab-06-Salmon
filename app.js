@@ -11,7 +11,7 @@ var pike = {
     return randNumber;
   },
   addFunction: function () {
-      for (var i = 0; i < 15; i++){
+      for (var i = 0; i < 14; i++){
         var amountCookies = Math.round(this.randomFunction() * this.avgCookie);
         this.arrayAmount.push(amountCookies);
     }
@@ -29,7 +29,7 @@ var seaTac = {
   },
   arrayAmount: [],
   addFunction: function () {
-      for (var i = 0; i < 15; i++){
+      for (var i = 0; i < 14; i++){
         var amountCookies = Math.round(this.randomFunction () * this.avgCookie);
 
         this.arrayAmount.push(amountCookies);
@@ -48,7 +48,7 @@ var seattle = {
   },
   arrayAmount: [],
   addFunction: function () {
-      for (var i = 0; i < 15; i++){
+      for (var i = 0; i < 14; i++){
         var amountCookies = Math.round(this.randomFunction () * this.avgCookie);
         this.arrayAmount.push(amountCookies);
     }
@@ -94,15 +94,16 @@ var Alki = {
 var stories = [pike, seaTac, seattle, capitalHill, Alki];
 function functionName(){
   for (var i = 0; i < stories.length; i++){
-    var heading = document.createElement('h2');
+    console.log(stories[i].minCookie);
+    var heading = document.createElement('h1');
     heading.textContent = stories[i].cookieLocation;
     var hourlyUl = document.getElementById('hourlyList');
     hourlyUl.appendChild(heading);
     var hourlyLi;
     stories[i].addFunction();
-    for (var list = 0; list < stories[i].arrayAmount.length; list++){
+    for (var list = 6; list < stories[i].arrayAmount.length + 6; list++){
       hourlyLi = document.createElement('li');
-      hourlyLi.textContent = list + 6 + 'am: '+ stories[i].arrayAmount[list]+ 'cookies';
+      hourlyLi.textContent = list + 'am: '+ stories[i].arrayAmount[list]+ 'cookies';
 
       hourlyUl.appendChild(hourlyLi);
     }
