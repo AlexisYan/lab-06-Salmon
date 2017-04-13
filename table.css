@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("https://goodnessgracioustreats.com/salmon_cookies.png");
+}
+#customerPerHour{
+  border: 2px solid black;
+  background-color: rgb(127, 89, 70);
+}
