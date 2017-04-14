@@ -1,9 +1,14 @@
 *{
+<<<<<<< HEAD
   width: 100%
+=======
+  width: 100%;
+>>>>>>> 7312f0b5eddc66fd6f45abe5c92fe1ccc774066d
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: rgb(234, 137, 110);
 }
@@ -18,4 +23,5 @@ img {
   border-radius: 60%;
   background-color: white;
   border: dotted;
+
 }
