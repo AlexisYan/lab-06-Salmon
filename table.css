@@ -15,11 +15,13 @@ body{
   margin: 20px auto;
   padding: 7px;
   text-align: center;
+  position: static;
 }
 th,tr,td {
   border: 1px solid black;
   font-size: 15px;
   padding: 7px;
+  position: static;
 }
 th:hover{
   background-color: rgb(253, 196, 195);
@@ -33,7 +35,9 @@ td:hover{
   display: block;
   font-size: 20px;
   margin: 10px auto;
+  position:static;
 }
 #costomerPerHour{
   width: 55%;
+  position: static;
 }
