@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookie data</title>
+    <link href = "table.css" rel = "stylesheet" type = "text/css"/>
+  </head>
+  <body>
+    <div id="app">
+      <form id="cookie-hour">
+        <fieldset>
+          <label> minimum cookies: <br/>
+          <input name="minCookies" type="text" placeholder="input minimum"/><br/>
+          <label> maximum cookies: <br/>
+          <input name="maxCookies" type="text" placeholder="input Maximum"/><br/>
+          <lable> average cookies: <br/>
+          <input name="avgCookies" type="text" placeholder="input avarage"/><br/>
+          <label> Store location: <br/>
+          <input name="locationName" type="text" placeholder="input Location"/><br/>
+        <button type="submit"> submit </button>
+      </fieldset>
+      </form>
+    </div>
+    <div id='list'></div>
+    <div id="customerPerHour"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

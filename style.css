@@ -4,21 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body{
-  background-color: rgb(240,182,175);
+
+body {
+  background-color: rgb(234, 137, 110);
 }
 h1{
-  height: 100px;
-  text-align: center;
-  font-size: 55px;
-  color: rgba(62, 55, 66, 0.5);
   font-family: cursive;
+  color: rgba(89, 37, 62, 0.6);
+  margin: 20px;
+  font-size: 55px;
+  text-align: center;
 }
-img{
-  border-radius: 75%;
-  border-style: dotted;
+img {
+  border-radius: 60%;
   background-color: white;
-}
-customerPerHour, customerPerHour *{
-  border: 2px, double, black;
+  border: dotted;
+
 }

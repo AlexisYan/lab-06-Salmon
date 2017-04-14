@@ -1,0 +1,39 @@
+*{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("https://goodnessgracioustreats.com/salmon_cookies.png");
+}
+#table{
+  width: 55%;
+  border: 1px solid black;
+  background-color: rgb(127, 89, 70);
+  display:block;
+  margin: 20px auto;
+  padding: 7px;
+  text-align: center;
+}
+th,tr,td {
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 7px;
+}
+th:hover{
+  background-color: rgb(253, 196, 195);
+}
+td:hover{
+  background-color: rgb(253, 196, 195);
+}
+#cookie-hour{
+  width: 200px;
+  background-color: rgba(242, 220, 212, 0.7);
+  display: block;
+  font-size: 20px;
+  margin: 10px auto;
+}
+#costomerPerHour{
+  width: 55%;
+}
