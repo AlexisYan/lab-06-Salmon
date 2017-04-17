@@ -1,27 +1,255 @@
 *{
-<<<<<<< HEAD
-  width: 100%
-=======
   width: 100%;
->>>>>>> 7312f0b5eddc66fd6f45abe5c92fe1ccc774066d
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*border: 0.5px solid black;*/
 }
-
-body {
+.clear-fix{
+  clear:both;
+}
+html, body {
+  height: 100%;
   background-color: rgb(234, 137, 110);
 }
-h1{
-  font-family: cursive;
-  color: rgba(89, 37, 62, 0.6);
-  margin: 20px;
-  font-size: 55px;
-  text-align: center;
+.header{
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index:10;
+  width: 100%;
+  opacity: 0.7;
 }
-img {
+#title{
+  font-family: 'Indie Flower', cursive;
+  color: rgba(89, 37, 62, 0.9);
+  margin: 20px 0 20px 0;
+  font-size: 55px;
+  float: right;
+  display: inline-block;
+  width: 66%;
+}
+#logo-image{
+  height:100px;
+  width: 100px;
+  display:inline-block;
+  float:left;
+  margin: 10px 0px 10px 372px;
+}
+.center-image{
+  width: 90%;
   border-radius: 60%;
   background-color: white;
   border: dotted;
+  display: block;
+  margin: 40px auto;
+  margin-top: 150px;
+}
+.shop-intro{
+  background-color: white;
+  opacity: 0.7;
+  width:90%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  margin-top: 90px;
+}
+#best-shop{
+  font-family: 'Pacifico', cursive;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  width: 600px;
+  margin: 0 auto;
+}
+.about-salmon{
+  position: static;
+  border-right: 1px solid maroon;
+  margin-top: 40px;
+  width:30%;
+  margin-left: 50px;
+  display: inline-block;
+  margin-right: 20px;
+}
+#salmon-image{
+  height: 50px;
+  width:100px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#quality-title{
+  font-family: 'Pacifico', cursive;
+  display:inline-block;
+  width: 70%;
+}
+#salmon-info{
+  text-align: center;
+  padding:20px;
+  margin:10px;
+}
 
+#cook-list{
+  list-style: none;
+  margin: 15px 25px;
+  font-family: 'Lobster Two', cursive;
+  font-style: italic;
+  padding: 10px
+}
+#make-cookies{
+  font-family: 'Pacifico', cursive;
+  display:block;
+  margin: 5px 30px;
+}
+li:before{
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 10%;
+  background-image: url('https://raw.githubusercontent.com/codefellows/seattle-201d21/master/class-10-js_debugging-wireframe_part_2/weekend-bonus/assets/frosted-cookie.jpg');
+  background-size: 160%;
+}
+.ingrediants{
+  position: static;
+  border-right: 1px solid maroon;
+  margin-top: 40px;
+  width:25%;
+  display: inline-block;
+  float: inherit;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.feedbacks{
+  position: static;
+  display: inline-block;
+  width: 25%;
+  float: right;
+  margin-top: 40px;
+  margin-right: 60px;
+}
+#family-pic{
+  height: 80px;
+  width:120px;
+  display: inline-block;
+}
+#feedback-title{
+  display: inline-block;
+  float: right;
+  width: 60%;
+  font-family: 'Pacifico', cursive;
+}
+#feedback-paragraph{
+  padding: 7px;
+  margin: 16px;
+}
+.buying-stuff{
+  margin-top: 50px;
+  background-color: white;
+  opacity: 0.6;
+  width: 90%;
+  margin-left: 75px;
+}
+#buying-title{
+  display: block;
+  width:300px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Pacifico', cursive;
+  border-bottom: 1px solid black;
+  font-size: 35px;
+}
+.picture-group{
+  width: 54%;
+  display: block;
+  margin: 30px auto;
+  padding-bottom: 30px;
+}
+#cookie-one{
+  width: 33%;
+  height: 150px;
+  display: inline-block;
+  float: left;
+}
+#cookie-two{
+  width:  33%;
+  height: 150px;
+  display: inline-block;
+  float: inherit;
+}
+#cookie-three{
+  width: 34%;
+  height: 150px;
+  display: inline-block;
+  float: right;
+}
+#salmon-cup{
+  width: 33%;
+  height: 150px;
+  display: inline-block;
+  float: left;
+}
+#salmon-shirt{
+  width: 33%;
+  height: 150px;
+  display: inline-block;
+  float: inherit;
+}
+#cookie-mold{
+  width: 34%;
+  height: 150px;
+  display: inline-block;
+  float: right;
+}
+.open-hours{
+  display: block;
+  margin: 0 auto;
+}
+#flower{
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  float: left;
+  margin-left: 400px;
+  margin-top: 20px;
+}
+.open-hours{
+  display: block;
+  margin: 70px auto;
+  /*border: 1px solid black;*/
+}
+#hour-title{
+  font-family: 'Pacifico', cursive;
+  border-bottom: 1px solid white;
+  text-align: left;
+  padding: 10px;
+  width: 500px;
+  margin: 0 auto;
+  color: white;
+  display: inline-block;
+}
+.cookie-hour{
+  display: inline-block;
+  margin: 50px 100px 40px 230px;
+  width: 30%;
+}
+#shop-open{
+  font-size: 24px;
+  color: white;
+  font-style: italic;
+  text-align: left;
+}
+#shop-title{
+  margin: 10px 0;
+  padding-left: 3%;
+  color: white;
+  font-family: 'Architects Daughter', cursive;
+  border-bottom: double white;
+  width:80%;
+  text-align: center;
+  font-size: 28px;
+}
+.store-hour{
+  display: inline-block;
+  float: right;
+  width: 30%;
+  margin: 50px 100px 40px 50px;
 }
